@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Outfit", sans-serif;
+
+  --color-primary: #7c3aed; /* Violet 600 */
+  --color-primary-light: #ddd6fe; /* Violet 200 */
+  --color-primary-dark: #4c1d95; /* Violet 900 */
+  --color-bg-light: #fdfaff; /* Very light purple/white */
+  --color-surface: #ffffff;
+  --color-text-main: #1e1b4b; /* Dark indigo for text */
+  --color-text-muted: #4b5563;
+  --color-accent: #c084fc; /* Purple 400 */
+}
+
+@layer base {
+  body {
+    @apply bg-bg-light text-text-main font-sans min-h-screen;
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #7c3aed, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.layout-lines {
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    rgba(124, 58, 237, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 20% 100%;
+}
+
+.card-purple-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-purple-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(124, 58, 237, 0.1), 0 10px 10px -5px rgba(124, 58, 237, 0.04);
+}
